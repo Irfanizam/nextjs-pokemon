@@ -13,15 +13,14 @@ interface Props {}
     
     //const name = queryParams.get("name")
     //console.log(queryParams.get('id'));
-   // const [poke, setPoke] = useState([]);
+    // const [poke, setPoke] = useState([]);
 
 
-function Home(props: Props) {
-    const {} = props
+function Home() {
+
     return (
         <div>
             <GetAbilities/>
-            
         </div>
     )
 }
