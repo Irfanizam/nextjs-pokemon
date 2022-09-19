@@ -11,7 +11,6 @@ const location = new ReactLocation()
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
       <QueryClientProvider client={client}>
         <Router 
         location={location}
@@ -20,7 +19,6 @@ function App() {
           <Outlet />
         </Router>
       </QueryClientProvider>
-    </ChakraProvider>
   );
 }
 
