@@ -17,7 +17,7 @@ interface Props {}
 
 
 function Home() {
-
+        
     return (
         <div>
             <GetAbilities/>

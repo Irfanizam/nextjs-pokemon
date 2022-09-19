@@ -11,7 +11,6 @@ function App() {
     <Flex bg="orange.100">
       <Container maxW={"3xl"}>
         <Navbar setPage={setPage} />
-        <GetAllPokemons />
         {/* <GetAbilities /> */}
         {/* {page === "pokemons" ? <Pokemons /> : <Bulbasaur />} */}
       </Container>
