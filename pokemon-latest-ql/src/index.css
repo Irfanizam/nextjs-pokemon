@@ -37,10 +37,11 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+.button1 {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin: 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -48,12 +49,41 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+.button2 {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  position: absolute;
+  right: 10px;
+  bottom: -150px;
+}
+
+.display {
+  display: inline-grid;
+  margin: 5px;
+}
+
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.cardPoke {
+  width: 160px;
+  background: rgb(247, 134, 134);
+  margin: 20px;
+  display: inline-grid;
 }
 
 @media (prefers-color-scheme: light) {
