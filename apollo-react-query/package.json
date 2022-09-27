@@ -12,6 +12,7 @@
     "@apollo/client": "^3.6.9",
     "@chakra-ui/react": "^2.3.4",
     "@tanstack/react-location": "^3.7.4",
+    "framer-motion": "^4.1.17",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
     "graphql-tag": "^2.12.6",
