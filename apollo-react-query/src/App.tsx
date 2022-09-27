@@ -1,40 +1,24 @@
-import gql from "graphql-tag";
-import { useGQLQuery } from "./graphQL/useGQLQuery";
+import routes from "./app.routing";
+import { Outlet, ReactLocation, Router } from "@tanstack/react-location";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ChakraProvider, theme } from "@chakra-ui/react";
+
+const location = new ReactLocation()
+const queryClient = new QueryClient();
 
 
-const GET_COUNTRIES = gql `
-  query {
-    countries {
-      code
-      name
-    }
-  }
-`;
-
-const GET_COUNTRY = gql `
-  query($code: ID!) {
-    country(code: $code) {
-      name
-    }
-  }
-`;
-
-const App = () => {
-  const { data, isLoading, error } = useGQLQuery ('countries', GET_COUNTRY, {
-    code: 'SE'
-  });
-  console.log(data);
-
-    if (isLoading) return <div>Loading ...</div>;
-    if (error) return <div>Something went wrong ...</div>
-
-  return (
-    <div> Country: {data.country.name}
-      {/*{data.countries.map(country => (
-        <div key={country.name} > {country.name} </div>
-      ))}*/}
-    </div>
-  )
-};
+function App() {
+  return <QueryClientProvider client={queryClient} >
+    {""}
+    <ChakraProvider theme={theme}>
+        <Router 
+        location={location}
+        routes={routes}
+        >
+          <Outlet />
+        </Router>
+    </ChakraProvider>
+  </QueryClientProvider>
+}
 
 export default App;
