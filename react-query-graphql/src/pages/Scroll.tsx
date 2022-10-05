@@ -61,7 +61,7 @@ export default function Scroll() {
         <div>
           <Stack padding={4}>
           <Link to="/">
-          <Button bg={"orange"}>Go back to Home</Button>
+          <Button bg={"orange"}>Go back Home</Button>
           </Link>
           </Stack>
           
