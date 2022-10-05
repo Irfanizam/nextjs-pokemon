@@ -7,6 +7,7 @@ import gql from 'graphql-tag';
 import { useQuery } from 'react-query';
 import PokemonDetails from '../components/PokemonDetails';
 import POKEMON_DETAIL from '../graphQL/POKEMON_DETAIL';
+import PokemonImage from '../components/PokemonImage';
 
 
 
@@ -15,8 +16,11 @@ export interface Pokemon {
 };
 
 interface PokemonQuery {
-    pokemon: {types: Pokemon[]}
-};
+    pokemon: {
+        id: number;
+        name: string;
+      };
+    };
 
 const endpoint = "https://graphql-pokeapi.graphcdn.app/";
 
@@ -38,14 +42,15 @@ function Details() {
     console.log(data);
 
     return (
-        <Stack >
+        <Stack padding={4}>
         
         <Link to="/">
-          <Button >Go back to Home</Button>
+          <Button bg={"orange"}>Go back to Home</Button>
         </Link>
 
         {!isFetching?         
         (<>
+            <PokemonImage props={data!.pokemon} />
             <PokemonDetails data={data}/>
         </>) : (
 
