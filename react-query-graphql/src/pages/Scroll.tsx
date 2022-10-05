@@ -37,8 +37,8 @@ export default function Scroll() {
       const option = { threshold: 0 }
     
       const observer = new IntersectionObserver(handleObserver, option);
-      observer.observe(element)
-      return () => observer.unobserve(element)
+      observer.observe(element!)
+      return () => observer.unobserve(element!)
     }, [fetchNextPage, hasNextPage, handleObserver])
     useEffect(() => {
       let fetching = false;
