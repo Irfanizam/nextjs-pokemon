@@ -48,7 +48,7 @@ export default function Scroll() {
           fetching = true
           if(hasNextPage) await fetchNextPage()
           fetching = false
-        }
+        } 
       }
       document.addEventListener('scroll', handleScroll)
       return () => {

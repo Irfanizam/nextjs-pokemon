@@ -38,7 +38,7 @@ export default function Home() {
 
         <Stack >
           <Heading padding={2 }>
-            <Image src="../public/image/poke_logo.png" alt="../public/image/poke_logo.png"  boxSize='100px'
+            <Image src="../image/poke_logo.png" alt="../image/poke_logo.png"  boxSize='100px'
             />
             Pokemons
           </Heading>
